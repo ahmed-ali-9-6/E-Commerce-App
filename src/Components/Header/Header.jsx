@@ -70,10 +70,7 @@ function Header() {
   };
 
   return (
-    <div
-      id="header"
-      className="container mx-auto lg:max-w-[1170px] font-poppins px-4 lg:px-0"
-    >
+    <div className="container mx-auto lg:max-w-[1170px] font-poppins px-4 lg:px-0">
       <h1 className="sm:hidden text-2xl font-bold tracking-wider">
         <Link to="/">Exclusive</Link>
       </h1>

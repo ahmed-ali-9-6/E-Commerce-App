@@ -102,27 +102,6 @@ function Featured() {
       </div>
 
       <Features />
-
-      <a
-        href="#header"
-        className=" inline-block px-[13px] py-[15px] rounded-full bg-[#f5f5f5] absolute right-0 bottom-[25px] "
-      >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 20V4M5 11L12 4L19 11"
-            stroke="black"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
     </div>
   );
 }

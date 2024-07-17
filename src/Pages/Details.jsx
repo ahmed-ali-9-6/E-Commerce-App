@@ -472,7 +472,7 @@ function Details() {
                     <img src={data.image} alt="product image" />
                   </div>
                   <button
-                    className=" w-full py-2 bg-black text-white font-medium opacity-0 transition-all duration-300 hover:opacity-100 active:scale-90"
+                    className=" w-full py-2 bg-black text-white font-medium lg:opacity-0 transition-all duration-300 hover:opacity-100 active:scale-90"
                     onClick={cartHandler}
                   >
                     Add To Cart

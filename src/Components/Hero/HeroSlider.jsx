@@ -21,7 +21,7 @@ function HeroSlider() {
 
   return (
     <>
-      <div className="flex gap-3 overflow-auto w-[76.3%]" dir="ltr">
+      <div className="flex gap-3 overflow-auto w-full sm:w-[76.3%]" dir="ltr">
         <Swiper
           breakpoints={{
             300: {
@@ -79,7 +79,7 @@ function HeroSlider() {
                   </Link>
                 </div>
                 <img
-                  className="my-4"
+                  className="my-4 hover:scale-95 duration-300"
                   src={phoneImg}
                   alt="Phone Image"
                   loading="lazy"
@@ -89,7 +89,7 @@ function HeroSlider() {
           </SwiperSlide>
           <SwiperSlide key={2}>
             <div className="flex-none gap-8 bg-black text-white w-full pt-4 lg:pt-0 lg:h-[360px] mt-6 relative">
-              <div className="flex justify-between items-center flex-col lg:flex-row w-[100%">
+              <div className="flex justify-between items-center flex-col lg:flex-row w-[100%]">
                 <div className=" ml-5 sm:ml-16 mb-10">
                   <h2 className=" text-[#FAFAFA] text-xl font-semibold my-5">
                     Laptop: Lenovo
@@ -126,7 +126,7 @@ function HeroSlider() {
                   </Link>
                 </div>
                 <img
-                  className="my-4"
+                  className="my-4 hover:scale-95 duration-300"
                   src={labtopImg}
                   alt="Phone Image"
                   loading="lazy"

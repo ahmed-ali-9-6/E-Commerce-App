@@ -201,7 +201,7 @@ function Footer() {
       </div>
       <div className=" border-t border-[#ffffff28] pt-4 text-center">
         <p className="text-[#ffffff60] ">
-          &copy; Copyright Rimel 2022. All right reserved
+          &copy; Copyright Ahmed Ali 2024. All right reserved
         </p>
       </div>
     </div>
