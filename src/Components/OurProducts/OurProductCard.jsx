@@ -1,8 +1,7 @@
 /*eslint-disable*/
-import { useContext } from "react";
-import { WishlistContext } from "../../Context/WishlistContext";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../Context/CartContext";
+import WishlistBtn from "../Common/WishlistBtn";
+import CartBtn from "../Common/CartBtn";
 
 function OurProductCard(props) {
   const {
@@ -21,54 +20,16 @@ function OurProductCard(props) {
     newRate,
   } = props;
 
-  const { updateWishlistData } = useContext(WishlistContext);
-  const { updateCartData } = useContext(CartContext);
-
-  const wishlistHandler = () => {
-    updateWishlistData(item);
-  };
-
-  const newProductWishlistHandler = () => {
-    updateWishlistData(newItem);
-  };
-
-  const cartHandler = () => {
-    updateCartData(item);
-  };
-
-  const newProductCartHandler = () => {
-    updateCartData(newItem);
-  };
-
   return (
     <div>
       {prodName !== undefined ? (
         <div className=" min-w-[270px]">
           <div className=" bg-[#f5f5f5] rounded overflow-auto h-[250px] relative mb-4">
             <div className="flex flex-col gap-2 absolute top-3 right-3">
-              <button
-                className=" rounded-full p-[10px] bg-white active:scale-75"
-                onClick={wishlistHandler}
-              >
-                <svg
-                  width="18"
-                  height="16"
-                  viewBox="0 0 18 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 1C2.7912 1 1 2.73964 1 4.88594C1 6.61852 1.7 10.7305 8.5904 14.8873C8.71383 14.961 8.85552 15 9 15C9.14448 15 9.28617 14.961 9.4096 14.8873C16.3 10.7305 17 6.61852 17 4.88594C17 2.73964 15.2088 1 13 1C10.7912 1 9 3.35511 9 3.35511C9 3.35511 7.2088 1 5 1Z"
-                    stroke="black"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <WishlistBtn item={item} />
               <Link
                 to={prodName}
-                className=" rounded-full py-[10px] px-2 bg-white active:scale-75"
+                className=" rounded-full py-[10px] px-2 bg-white active:scale-75 hover:bg-sky-200 duration-300"
               >
                 <svg
                   width="22"
@@ -97,12 +58,7 @@ function OurProductCard(props) {
             <div className="flex justify-center items-end h-[83.5%] ">
               <img src={image} alt="product image" loading="lazy" />
             </div>
-            <button
-              className=" w-full py-2 bg-black text-white font-medium lg:opacity-0 transition-all duration-300 hover:opacity-100 active:scale-90"
-              onClick={cartHandler}
-            >
-              Add To Cart
-            </button>
+            <CartBtn item={item} />
           </div>
           <div>
             <h2 className=" font-medium mb-2">{prodName}</h2>
@@ -125,29 +81,10 @@ function OurProductCard(props) {
               </span>
             ) : null}
             <div className="flex flex-col gap-2 absolute top-3 right-3">
-              <button
-                className=" rounded-full p-[10px] bg-white active:scale-75"
-                onClick={newProductWishlistHandler}
-              >
-                <svg
-                  width="18"
-                  height="16"
-                  viewBox="0 0 18 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 1C2.7912 1 1 2.73964 1 4.88594C1 6.61852 1.7 10.7305 8.5904 14.8873C8.71383 14.961 8.85552 15 9 15C9.14448 15 9.28617 14.961 9.4096 14.8873C16.3 10.7305 17 6.61852 17 4.88594C17 2.73964 15.2088 1 13 1C10.7912 1 9 3.35511 9 3.35511C9 3.35511 7.2088 1 5 1Z"
-                    stroke="black"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <WishlistBtn item={newItem} />
               <Link
                 to={newProdName}
-                className=" rounded-full py-[10px] px-2 bg-white active:scale-75"
+                className=" rounded-full py-[10px] px-2 bg-white active:scale-75 hover:bg-sky-200 duration-300"
               >
                 <svg
                   width="22"
@@ -176,12 +113,7 @@ function OurProductCard(props) {
             <div className="flex justify-center items-end h-[83.5%] ">
               <img src={newImage} alt="product image" loading="lazy" />
             </div>
-            <button
-              className=" w-full py-2 bg-black text-white font-medium lg:opacity-0 transition-all duration-300 hover:opacity-100 active:scale-90"
-              onClick={newProductCartHandler}
-            >
-              Add To Cart
-            </button>
+            <CartBtn item={newItem} />
           </div>
           <div>
             <h2 className=" font-medium mb-2">{newProdName}</h2>

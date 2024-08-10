@@ -12,6 +12,9 @@ import { WishlistContext } from "../Context/WishlistContext";
 import { CartContext } from "../Context/CartContext";
 import { RatingContext } from "../Context/RatingContext";
 import { useTranslation } from "react-i18next";
+import WishlistBtn from "../Components/Common/WishlistBtn";
+import CartBtn from "../Components/Common/CartBtn";
+import { t } from "i18next";
 
 const handleStars = (rate) => {
   const stars = [];
@@ -405,13 +408,6 @@ function Details() {
         <div className="flex flex-wrap justify-center gap-[30px]">
           {relatedData.map((data, index) => {
             const relatedRate = `${Math.floor(Math.random() * 21) + 80}`;
-            const wishlistHandler = () => {
-              updateWishlistData(data);
-            };
-
-            const cartHandler = () => {
-              updateCartData(data);
-            };
 
             return (
               <div
@@ -420,29 +416,10 @@ function Details() {
               >
                 <div className=" bg-[#f5f5f5] rounded overflow-auto h-[250px] relative mb-4">
                   <div className="flex flex-col gap-2 absolute top-3 right-3">
-                    <button
-                      className=" rounded-full p-[10px] bg-white active:scale-75"
-                      onClick={wishlistHandler}
-                    >
-                      <svg
-                        width="18"
-                        height="16"
-                        viewBox="0 0 18 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M5 1C2.7912 1 1 2.73964 1 4.88594C1 6.61852 1.7 10.7305 8.5904 14.8873C8.71383 14.961 8.85552 15 9 15C9.14448 15 9.28617 14.961 9.4096 14.8873C16.3 10.7305 17 6.61852 17 4.88594C17 2.73964 15.2088 1 13 1C10.7912 1 9 3.35511 9 3.35511C9 3.35511 7.2088 1 5 1Z"
-                          stroke="black"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <WishlistBtn item={data} />
                     <Link
                       to={`/${data.prodName}`}
-                      className=" rounded-full py-[10px] px-2 bg-white active:scale-75"
+                      className=" rounded-full py-[10px] px-2 bg-white active:scale-75 hover:bg-sky-200 duration-300"
                     >
                       <svg
                         width="22"
@@ -471,12 +448,7 @@ function Details() {
                   <div className="flex justify-center items-end h-[83.5%] ">
                     <img src={data.image} alt="product image" />
                   </div>
-                  <button
-                    className=" w-full py-2 bg-black text-white font-medium lg:opacity-0 transition-all duration-300 hover:opacity-100 active:scale-90"
-                    onClick={cartHandler}
-                  >
-                    Add To Cart
-                  </button>
+                  <CartBtn item={data} />
                 </div>
                 <div>
                   <h2 className=" font-medium mb-2">{data.prodName}</h2>

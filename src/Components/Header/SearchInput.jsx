@@ -1,12 +1,19 @@
-import { useContext } from "react";
+/*eslint-disable*/
+import { useContext, useEffect } from "react";
 import { SearchAndLoaderContext } from "../../Context/SearchAndLoaderContext";
 import { totalProductsData } from "../../allProductsData";
 import { useTranslation } from "react-i18next";
 import { debounce } from "lodash";
+import { useLocation } from "react-router-dom";
 
 function SearchInput() {
   const { updateFilteredProducts } = useContext(SearchAndLoaderContext);
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    updateFilteredProducts("");
+  }, [pathname]);
 
   const debounceSearch = debounce((e) => {
     e.preventDefault();

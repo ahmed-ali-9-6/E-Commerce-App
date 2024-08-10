@@ -29,7 +29,7 @@ function SaleHeader() {
   };
 
   return (
-    <div className=" bg-black w-full font-poppins text-sm mb-5 lg:mb-10">
+    <div className=" bg-black w-full font-poppins text-sm mb-3">
       <div className=" flex text-[#fafafa] justify-around items-center  sm:h-12">
         <div className=" w-1/2">
           <div className=" flex gap-1 sm:gap-2 justify-center items-end leading-3">

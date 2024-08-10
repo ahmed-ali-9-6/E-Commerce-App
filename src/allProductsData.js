@@ -51,28 +51,28 @@ const productsData = [
   {
     salePerc: "-35%",
     image: keyboardImg,
-    prodName: "AK-900 Wired Keyboard",
+    prodName: "AK-900 Keyboard",
     priceBefore: 1160,
     priceAfter: 960,
   },
   {
     salePerc: "-25%",
     image: chairImg,
-    prodName: "S-Series Comfort Chair",
+    prodName: "Comfort Chair",
     priceBefore: 400,
     priceAfter: 375,
   },
   {
     salePerc: "-40%",
     image: gpadImg,
-    prodName: "HAVIT HV-G92 Gamepad",
+    prodName: "HAVIT Gamepad",
     priceBefore: 160,
     priceAfter: 120,
   },
   {
     salePerc: "-30%",
     image: tvImg,
-    prodName: "IPS LCD Gaming Monitor",
+    prodName: "LCD Monitor",
     priceBefore: 400,
     priceAfter: 370,
   },
@@ -128,12 +128,12 @@ const ourProductsData = [
   },
   {
     image: cameraImg,
-    prodName: "CANON EOS DSLR Camera",
+    prodName: "CANON Camera",
     priceAfter: 360,
   },
   {
     image: labtop2Img,
-    prodName: "ASUS FHD Gaming Laptop",
+    prodName: "ASUS FHD Laptop",
     priceAfter: 700,
   },
 ];
