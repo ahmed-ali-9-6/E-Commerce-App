@@ -1,17 +1,4 @@
 /*eslint-disable*/
-const script1 = document.createElement("script");
-script1.src = "https://firebase.google.com/docs/web/setup#available-libraries";
-
-const script2 = document.createElement("script");
-script2.src = "https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js";
-
-const script3 = document.createElement("script");
-script3.src =
-  "https://www.gstatic.com/firebasejs/9.0.2/firebase-database-compat.js";
-
-document.head.appendChild(script1);
-document.head.appendChild(script2);
-document.head.appendChild(script3);
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";

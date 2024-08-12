@@ -10,7 +10,7 @@ function CartBtn(props) {
   const { user, userData } = useContext(AuthContext);
   const { updateCartData, cartItemDeleteHandler } = useContext(CartContext);
   const [isInCart, setIsInCart] = useState(false);
-  const getCartData = JSON.parse(localStorage.getItem("cartItems"));
+  const getCartData = JSON.parse(localStorage.getItem("cartItems")) || [];
 
   const cartHandler = () => updateCartData(item);
 
@@ -23,24 +23,24 @@ function CartBtn(props) {
     setIsInCart(false);
   };
 
-  const db = getFirestore();
   useEffect(() => {
     if (user) {
+      const db = getFirestore();
       const userRef = doc(db, "users", user.uid);
       const unsubscribe = onSnapshot(userRef, (docSnap) => {
         if (docSnap.exists()) {
           const userData = docSnap.data();
           setIsInCart(
-            userData?.cart.some((data) => data.prodName === item.prodName)
+            userData?.cart?.some((data) => data.prodName === item.prodName)
           );
         }
       });
 
       return () => unsubscribe();
     } else {
-      setIsInCart(getCartData.some((data) => data.prodName === item.prodName));
+      setIsInCart(getCartData?.some((data) => data.prodName === item.prodName));
     }
-  }, [db, user, item.prodName, getCartData]);
+  }, [user, item.prodName, getCartData]);
 
   return (
     <>

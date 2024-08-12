@@ -11,7 +11,8 @@ function WishlistBtn(props) {
     useContext(WishlistContext);
   const { user, userData } = useContext(AuthContext);
 
-  const getWishlistData = JSON.parse(localStorage.getItem("wishlistItems"));
+  const getWishlistData =
+    JSON.parse(localStorage.getItem("wishlistItems")) || [];
 
   const wishlistHandler = () => updateWishlistData(item);
 
@@ -24,15 +25,15 @@ function WishlistBtn(props) {
     setIsInWishlist(false);
   };
 
-  const db = getFirestore();
   useEffect(() => {
     if (user) {
+      const db = getFirestore();
       const userRef = doc(db, "users", user.uid);
       const unsubscribe = onSnapshot(userRef, (docSnap) => {
         if (docSnap.exists()) {
           const userData = docSnap.data();
           setIsInWishlist(
-            userData?.wishlist.some((data) => data.prodName === item.prodName)
+            userData?.wishlist?.some((data) => data.prodName === item.prodName)
           );
         }
       });
@@ -40,10 +41,10 @@ function WishlistBtn(props) {
       return () => unsubscribe();
     } else {
       setIsInWishlist(
-        getWishlistData.some((data) => data.prodName === item.prodName)
+        getWishlistData?.some((data) => data.prodName === item.prodName)
       );
     }
-  }, [db, user, item.prodName, wishlistData]);
+  }, [user, item.prodName, wishlistData]);
 
   return (
     <>

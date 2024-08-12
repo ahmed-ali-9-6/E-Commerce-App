@@ -8,55 +8,15 @@ function CategoryNav() {
 
   return (
     <ul
-      className={`flex flex-col gap-4 relative ${
+      className={`flex flex-col gap-4  ${
         lng === "ar" ? " pr-3" : null
-      }`}
+      } relative`}
     >
       <li className=" transition-all duration-300 hover:scale-110">
-        <Link
-          to="exploreOurProducts"
-          className="flex justify-between items-center"
-        >
-          <p> {t`Woman's Fashion`}</p>
-          <svg
-            className={` mr-6 active:rotate-45 ${
-              lng === "ar" ? "rotate-180" : null
-            }`}
-            width="8"
-            height="13"
-            viewBox="0 0 8 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.95 6.63597L0 1.68597L1.414 0.271973L7.778 6.63597L1.414 13L0 11.586L4.95 6.63597Z"
-              fill="black"
-            />
-          </svg>
-        </Link>
+        <Link to="exploreOurProducts">{t`Woman's Fashion`}</Link>
       </li>
       <li className=" transition-all duration-300 hover:scale-110">
-        <Link
-          to="exploreOurProducts"
-          className="flex justify-between items-center"
-        >
-          <p> {t`Men's Fashion`}</p>
-          <svg
-            className={` mr-6 active:rotate-45 ${
-              lng === "ar" ? "rotate-180" : null
-            }`}
-            width="8"
-            height="13"
-            viewBox="0 0 8 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.95 6.63597L0 1.68597L1.414 0.271973L7.778 6.63597L1.414 13L0 11.586L4.95 6.63597Z"
-              fill="black"
-            />
-          </svg>
-        </Link>
+        <Link to="exploreOurProducts">{t`Men's Fashion`}</Link>
       </li>
       <li className=" transition-all duration-300 hover:scale-110">
         <Link to="exploreOurProducts">{t`Electronics`}</Link>
@@ -80,7 +40,7 @@ function CategoryNav() {
         <Link to="exploreOurProducts">{t`Health & Beauty`}</Link>
       </li>
       <div
-        className={` hidden lg:block border-r absolute top-[-43px] ${
+        className={` hidden lg:block border-r absolute top-[-59px] ${
           lng === "ar" ? "right-64" : "right-0"
         }  h-[60vh] border-black opacity-10`}
       ></div>
