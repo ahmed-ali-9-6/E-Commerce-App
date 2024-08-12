@@ -9,7 +9,7 @@ export const SearchAndLoaderContext = createContext({
 function SearchAndLoaderContextProvider(props) {
   const { children } = props;
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const updateFilteredProducts = (newProduct) => {
     setFilteredProducts(newProduct);
