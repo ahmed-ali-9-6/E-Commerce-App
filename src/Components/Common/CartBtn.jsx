@@ -49,6 +49,7 @@ function CartBtn(props) {
           className={`flex justify-center items-center gap-2  text-xs w-full py-2 bg-black text-white active:scale-90
             ${isInCart ? "hidden" : "block"}`}
           onClick={cartHandler}
+          aria-label="Add to Cart Button"
         >
           <svg
             width="24"
@@ -94,6 +95,7 @@ function CartBtn(props) {
             isInCart ? "hidden" : "block"
           }`}
           onClick={cartHandler}
+          aria-label="Add to Cart Button"
         >
           Add To Cart
         </button>
@@ -103,6 +105,7 @@ function CartBtn(props) {
           className={`flex justify-center items-center gap-2  text-xs w-full py-2 bg-black text-white active:scale-90
             ${isInCart ? "block" : "hidden"}`}
           onClick={cartDeleteHandler}
+          aria-label="Remove from Cart Button"
         >
           <svg
             width="24"
@@ -148,6 +151,7 @@ function CartBtn(props) {
             isInCart ? "block" : "hidden"
           }`}
           onClick={cartDeleteHandler}
+          aria-label="Remove from Cart Button"
         >
           Remove From Cart
         </button>

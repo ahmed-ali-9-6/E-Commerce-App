@@ -33,6 +33,7 @@ function OurProducts() {
             <button
               className=" px-[13px] py-[15px] rounded-full bg-[#f5f5f5]"
               onClick={scrollLeftHandle}
+              aria-label="Left Button"
             >
               <svg
                 width="18"
@@ -53,6 +54,7 @@ function OurProducts() {
             <button
               className=" px-[13px] py-[15px] rounded-full bg-[#f5f5f5]"
               onClick={scrollRightHandle}
+              aria-label="Right Button"
             >
               <svg
                 width="19"

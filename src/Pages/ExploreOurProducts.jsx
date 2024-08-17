@@ -65,6 +65,7 @@ function ExploreOurProducts() {
                     <Link
                       to={`/${data.prodName}`}
                       className=" rounded-full py-[10px] px-2 bg-white active:scale-75"
+                      aria-label="Show Details Button"
                     >
                       <svg
                         width="22"

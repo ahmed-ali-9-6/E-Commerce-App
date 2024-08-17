@@ -20,7 +20,7 @@ function Footer() {
           <p className="  mb-4">{t`Get 10% off your first order`}</p>
           <form className=" relative h-[38px] w-[217px]">
             <div className="absolute right-[18px] top-3">
-              <button>
+              <button aria-label="Email Button">
                 <svg
                   width="24"
                   height="24"
@@ -119,7 +119,7 @@ function Footer() {
             </div>
           </div>
           <div className="flex justify-between mr-[30px]">
-            <a href="#">
+            <a href="#" aria-label="Facebook Link">
               <svg
                 width="24"
                 height="24"
@@ -133,7 +133,7 @@ function Footer() {
                 />
               </svg>
             </a>
-            <a href="#">
+            <a href="#" aria-label="Twitter Link">
               <svg
                 width="24"
                 height="24"
@@ -156,7 +156,7 @@ function Footer() {
                 </defs>
               </svg>
             </a>
-            <a href="#">
+            <a href="#" aria-label="Instagram Link">
               <svg
                 width="24"
                 height="24"
@@ -182,7 +182,7 @@ function Footer() {
                 />
               </svg>
             </a>
-            <a href="#">
+            <a href="#" aria-label="Linkedin Link">
               <svg
                 width="24"
                 height="24"

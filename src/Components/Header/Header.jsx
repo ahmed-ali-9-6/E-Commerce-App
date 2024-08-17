@@ -100,7 +100,11 @@ function Header() {
           </div>
           <div className="flex justify-evenly lg:justify-between items-center sm:w-[29%] gap-3 sm:flex-wrap lg:flex-nowrap relative">
             <SearchInput />
-            <Link to="wishlist" className="active:scale-90">
+            <Link
+              to="wishlist"
+              className="active:scale-90"
+              aria-label="Wishlist page button"
+            >
               <div className=" relative">
                 {totalNumWishItems() !== 0 ? (
                   <span className=" absolute top-[-8px] right-[-4px] px-[4px] rounded-full text-white text-xs bg-red-600">
@@ -124,7 +128,11 @@ function Header() {
                 </svg>
               </div>
             </Link>
-            <Link to="cart" className="active:scale-90">
+            <Link
+              to="cart"
+              className="active:scale-90"
+              aria-label="Cart page button"
+            >
               <div className="relative">
                 {totalNumCartItems() !== 0 ? (
                   <span className=" absolute top-[-2px] right-[-4px] px-[4px] rounded-full text-white text-xs bg-red-600">
@@ -169,7 +177,7 @@ function Header() {
                 </svg>
               </div>
             </Link>
-            <button onClick={toggleAccountNavHandle}>
+            <button onClick={toggleAccountNavHandle} aria-label="User button">
               {user ? (
                 <div className="flex justify-center items-center w-8 h-8 rounded-full bg-[#004d40] text-white">
                   <span>

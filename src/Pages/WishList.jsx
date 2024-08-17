@@ -280,6 +280,7 @@ function WishList() {
                       <Link
                         to={`/${data.prodName}`}
                         className=" rounded-full py-[10px] px-2 bg-white hover:bg-sky-200 duration-300"
+                        aria-label="Show Details button"
                       >
                         <svg
                           width="22"

@@ -14,6 +14,7 @@ function BestProductCard(props) {
           <Link
             to={prodName}
             className=" rounded-full py-[10px] px-2 bg-white active:scale-75 hover:bg-sky-200 duration-300"
+            aria-label="Show Details Button"
           >
             <svg
               width="22"

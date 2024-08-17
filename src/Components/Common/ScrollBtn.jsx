@@ -30,6 +30,7 @@ const ScrollBtn = () => {
         showButton ? "block" : "hidden"
       }`}
       dir="ltr"
+      aria-label="Scroll To Top Button"
     >
       {showButton && (
         <motion.div

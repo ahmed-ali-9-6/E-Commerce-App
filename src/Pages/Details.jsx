@@ -246,6 +246,7 @@ function Details() {
                 className="border-r border-[#00000050] h-full text-2xl px-3 hover:bg-[#DB4444] hover:text-white"
                 type="button"
                 onClick={decreaseCounterHandler}
+                aria-label="Decrease Button"
               >
                 -
               </button>
@@ -254,6 +255,7 @@ function Details() {
                 className="border-l border-[#00000050] h-full text-2xl px-3 hover:bg-[#DB4444] hover:text-white"
                 type="Button"
                 onClick={increaseCounterHandler}
+                aria-label="Increase Button"
               >
                 +
               </button>
@@ -267,6 +269,7 @@ function Details() {
             <button
               className="border border-[#00000050] rounded p-1 active:scale-90"
               onClick={wishlistDetailHandler}
+              aria-label="Add to wishlist Button"
             >
               <svg
                 width="32"
@@ -420,6 +423,7 @@ function Details() {
                     <Link
                       to={`/${data.prodName}`}
                       className=" rounded-full py-[10px] px-2 bg-white active:scale-75 hover:bg-sky-200 duration-300"
+                      aria-label="Show Details Button"
                     >
                       <svg
                         width="22"

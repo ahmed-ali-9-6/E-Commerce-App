@@ -36,6 +36,7 @@ function FlashSales() {
             <button
               className=" px-[13px] py-[15px] rounded-full bg-[#f5f5f5]"
               onClick={scrollLeftHandle}
+              aria-label="Left button"
             >
               <svg
                 width="18"
@@ -56,6 +57,7 @@ function FlashSales() {
             <button
               className=" px-[13px] py-[15px] rounded-full bg-[#f5f5f5]"
               onClick={scrollRightHandle}
+              aria-label="Right button"
             >
               <svg
                 width="19"

@@ -53,6 +53,7 @@ function WishlistBtn(props) {
           isInWishlist ? "hidden" : "block"
         }`}
         onClick={wishlistHandler}
+        aria-label="Add to Wishlist Button"
       >
         <svg
           width="18"
@@ -75,6 +76,7 @@ function WishlistBtn(props) {
           isInWishlist ? "block" : "hidden"
         }`}
         onClick={wishlistDeleteHandler}
+        aria-label="Remove from Wishlist Button"
       >
         <svg
           width="24"

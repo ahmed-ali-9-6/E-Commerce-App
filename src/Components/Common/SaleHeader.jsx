@@ -46,10 +46,18 @@ function SaleHeader() {
           className=" px-2 ml-10 bg-black"
           onChange={changeLanguage}
           defaultValue={deafultValue()}
+          aria-label="Languages Selector"
         >
-          <option value="en">English</option>
-          <option value="de">German</option>
-          <option value="ar"> عربي</option>
+          <option value="en" aria-label="English Language">
+            English
+          </option>
+          <option value="de" aria-label="German Language">
+            German
+          </option>
+          <option value="ar" aria-label="Arabic Language">
+            {" "}
+            عربي
+          </option>
         </select>
       </div>
     </div>
